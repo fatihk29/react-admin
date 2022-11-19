@@ -10,7 +10,6 @@ import Header from "../../components/Header";
 
 import { COLORS } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
-import { color } from "@mui/system";
 
 const Team = () => {
   const theme = useTheme();
@@ -64,7 +63,7 @@ const Team = () => {
   ];
 
   return (
-    <Box m="20px`">
+    <Box m="20px">
       <Header title="TEAM" subtitle="Team Members" />
       <Box
         m="40px 0 0 0"

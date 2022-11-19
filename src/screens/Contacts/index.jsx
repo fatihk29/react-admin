@@ -1,23 +1,22 @@
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
-
 import { COLORS } from "../../theme";
-import { mockDataTeam } from "../../data/mockData";
-import { color } from "@mui/system";
+import { mockDataContacts } from "../../data/mockData";
 
-const Team = () => {
+const Contacts = () => {
   const theme = useTheme();
   const colors = COLORS(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID", flex: 0.5 },
+    {
+      field: "registerId",
+      headerName: "Register ID",
+      flex: 1,
+    },
     {
       field: "name",
       headerName: "Name",
@@ -30,42 +29,17 @@ const Team = () => {
       type: "number",
       headerAlign: "left",
       align: "left",
-      cellClassName: "name-column--cell",
     },
     { field: "phone", headerName: "Phone", flex: 1 },
     { field: "email", headerName: "Email", flex: 1 },
-    {
-      field: "access",
-      headerName: "Access Level",
-      flex: 1,
-      renderCell: ({ row: { access } }) => {
-        return (
-          <Box
-            width="60px"
-            m="0 auto"
-            p="5px"
-            justifyContent="center"
-            sx={{
-              backgroundColor:
-                access === "admin"
-                  ? colors.greenAccent[600]
-                  : colors.greenAccent[700],
-              borderRadius: "4px",
-            }}
-          >
-            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
-            {access === "manager" && <SecurityOutlinedIcon />}
-            {access === "user" && <LockOpenOutlinedIcon />}
-            <Typography color={colors.grey[100]}>{access}</Typography>
-          </Box>
-        );
-      },
-    },
+    { field: "address", headerName: "Address", flex: 1 },
+    { field: "city", headerName: "City", flex: 1 },
+    { field: "zipCode", headerName: "Zip Code", flex: 1 },
   ];
 
   return (
-    <Box m="20px`">
-      <Header title="TEAM" subtitle="Team Members" />
+    <Box m="20px">
+      <Header title="Contacts" subtitle="List of Contact" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -89,12 +63,19 @@ const Team = () => {
             borderTop: "none",
             backgroundColor: colors.blueAccent[700],
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]}  !important`,
+          },
         }}
       >
-        <DataGrid rows={mockDataTeam} columns={columns} />
+        <DataGrid
+          rows={mockDataContacts}
+          columns={columns}
+          components={{ Toolbar: GridToolbar }}
+        />
       </Box>
     </Box>
   );
 };
 
-export default Team;
+export default Contacts;

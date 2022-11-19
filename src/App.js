@@ -6,8 +6,8 @@ import Topbar from "./screens/global/Topbar";
 import Sidebar from "./screens/global/Sidebar";
 import Dashboard from "./screens/Dashboard";
 import Team from "./screens/Team";
+import Contacts from "./screens/Contacts";
 // import Invoices from "./screens/Invoices";
-// import Contacts from "./screens/Contacts";
 // import Bar from "./screens/Bar";
 // import Form from "./screens/Form";
 // import Line from "./screens/Line";
@@ -40,8 +40,9 @@ const AppNavigation = () => {
     <Routes>
       <Route path="/" element={<Dashboard />} />
       <Route path="/team" element={<Team />} />
-      {/* <Route path="/invoices" element={<Invoices />} />
       <Route path="/contacts" element={<Contacts />} />
+      {/* <Route path="/invoices" element={<Invoices />} />
+
       <Route path="/bar" element={<Bar />} />
       <Route path="/form" element={<Form />} />
       <Route path="/line" element={<Line />} />
