@@ -68,7 +68,7 @@ const Sidebar = () => {
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
-            style={{
+            sx={{
               margin: "10px 0 20px 0",
               color: colors.grey[100],
             }}
@@ -81,7 +81,7 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
+                  ADmin
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -125,7 +125,6 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
             <Typography
               variant="h6"
               color={colors.grey[300]}
@@ -154,7 +153,6 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
             <Typography
               variant="h6"
               color={colors.grey[300]}

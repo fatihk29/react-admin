@@ -4,8 +4,8 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/global/Topbar";
 import Sidebar from "./screens/global/Sidebar";
-import Dashboard from "./screens/dashboard";
-// import Team from "./screens/Team";
+import Dashboard from "./screens/Dashboard";
+import Team from "./screens/Team";
 // import Invoices from "./screens/Invoices";
 // import Contacts from "./screens/Contacts";
 // import Bar from "./screens/Bar";
@@ -39,8 +39,8 @@ const AppNavigation = () => {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      {/* <Route path="/team" element={<Team />} />
-      <Route path="/invoices" element={<Invoices />} />
+      <Route path="/team" element={<Team />} />
+      {/* <Route path="/invoices" element={<Invoices />} />
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/bar" element={<Bar />} />
       <Route path="/form" element={<Form />} />
