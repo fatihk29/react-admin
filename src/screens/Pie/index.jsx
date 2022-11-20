@@ -1,16 +1,16 @@
 import Grid from "@mui/material/Grid";
 
+// project imports
 import Header from "../../components/Header";
-import { COLORS } from "../../theme";
-import BarChart from "../../components/BarChart";
+import PieChart from "../../components/PieChart";
 
 const Bar = () => {
   return (
     <Grid container sx={{ p: "20px 20px 0px 20px" }}>
-      <Header title="Bar Chart" subtitle="Examples" />
+      <Header title="Pie Chart" subtitle="Examples" />
       <Grid container justifyContent="flex-start">
         <Grid item sx={{ mt: "2em", height: "75vh" }} xs={10} sm={8}>
-          <BarChart />
+          <PieChart />
         </Grid>
       </Grid>
     </Grid>

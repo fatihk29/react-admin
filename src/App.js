@@ -9,13 +9,13 @@ import Team from "./screens/Team";
 import Contacts from "./screens/Contacts";
 import Invoices from "./screens/Invoices";
 import Form from "./screens/Form";
+import Calendar from "./screens/Calendar";
+import FAQ from "./screens/FAQ";
+import Bar from "./screens/Bar";
+import Pie from "./screens/Pie";
 
-// import Bar from "./screens/Bar";
 // import Line from "./screens/Line";
-// import Pie from "./screens/Pie";
-// import FAQ from "./screens/FAQ";
 // import Geography from "./screens/Geography";
-// import Calendar from "./screens/Calendar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -44,14 +44,13 @@ const AppNavigation = () => {
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/invoices" element={<Invoices />} />
       <Route path="/form" element={<Form />} />
-      {/* 
-      <Route path="/bar" element={<Bar />} />
-
-      <Route path="/line" element={<Line />} />
-      <Route path="/pie" element={<Pie />} />
+      <Route path="/calendar" element={<Calendar />} />
       <Route path="/faq" element={<FAQ />} />
+      <Route path="/bar" element={<Bar />} />
+      <Route path="/pie" element={<Pie />} />
+      {/* 
+      <Route path="/line" element={<Line />} />
       <Route path="/geography" element={<Geography />} />
-      <Route path="/geography" element={<Calendar />} /> 
       */}
     </Routes>
   );
