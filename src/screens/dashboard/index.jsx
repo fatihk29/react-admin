@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -26,10 +27,14 @@ const Dashboard = () => {
   return (
     <Box m="20px">
       {/* HEADER */}
-      <Box display="flex" justifyContent="space-between" alignItems="center">
+      <Grid
+        container
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
-        <Box>
+        <Grid item>
           <Button
             sx={{
               backgroundColor: colors.blueAccent[700],
@@ -42,8 +47,8 @@ const Dashboard = () => {
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
             Download Reports
           </Button>
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
 
       {/* GRID & CHARTS */}
       <Box

@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 
@@ -39,43 +39,45 @@ const Contacts = () => {
   ];
 
   return (
-    <Box m="20px">
-      <Header title="Contacts" subtitle="List of Contact" />
-      <Box
-        m="40px 0 0 0"
-        height="75vh"
-        sx={{
-          "& .MuiDataGrid-root": {
-            border: "none",
-          },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
-            color: colors.greenAccent[300],
-          },
-          "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
-          },
-          "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `${colors.grey[100]}  !important`,
-          },
-        }}
-      >
-        <DataGrid
-          rows={mockDataContacts}
-          columns={columns}
-          components={{ Toolbar: GridToolbar }}
-        />
-      </Box>
-    </Box>
+    <Grid container sx={{ p: "20px 20px 0px 20px" }}>
+      <Grid item xs={10} sm={10}>
+        <Header title="Contacts" subtitle="List of Contact" />
+        <Grid
+          m="40px 0 0 0"
+          height="75vh"
+          sx={{
+            "& .MuiDataGrid-root": {
+              border: "none",
+            },
+            "& .MuiDataGrid-cell": {
+              borderBottom: "none",
+            },
+            "& .name-column--cell": {
+              color: colors.greenAccent[300],
+            },
+            "& .MuiDataGrid-columnHeaders": {
+              backgroundColor: colors.blueAccent[700],
+            },
+            "& .MuiDataGrid-virtualScroller": {
+              backgroundColor: colors.primary[400],
+            },
+            "& .MuiDataGrid-footerContainer": {
+              borderTop: "none",
+              backgroundColor: colors.blueAccent[700],
+            },
+            "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+              color: `${colors.grey[100]}  !important`,
+            },
+          }}
+        >
+          <DataGrid
+            rows={mockDataContacts}
+            columns={columns}
+            components={{ Toolbar: GridToolbar }}
+          />
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 

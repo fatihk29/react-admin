@@ -1,4 +1,5 @@
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
@@ -40,7 +41,7 @@ const Team = () => {
       renderCell: ({ row: { access } }) => {
         return (
           <Box
-            width="60px"
+            minWidth="60px"
             m="0 auto"
             p="5px"
             justifyContent="center"
@@ -63,36 +64,39 @@ const Team = () => {
   ];
 
   return (
-    <Box m="20px">
-      <Header title="TEAM" subtitle="Team Members" />
-      <Box
-        m="40px 0 0 0"
-        height="75vh"
-        sx={{
-          "& .MuiDataGrid-root": {
-            border: "none",
-          },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
-            color: colors.greenAccent[300],
-          },
-          "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
-          },
-          "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
-          },
-        }}
-      >
-        <DataGrid rows={mockDataTeam} columns={columns} />
-      </Box>
-    </Box>
+    <Grid container sx={{ p: "20px 20px 0px 20px" }}>
+      <Grid item xs={10} sm={10}>
+        <Header title="TEAM" subtitle="Team Members" />
+        <Grid
+          item
+          m="20px 0 0 0"
+          height="75vh"
+          sx={{
+            "& .MuiDataGrid-root": {
+              border: "none",
+            },
+            "& .MuiDataGrid-cell": {
+              borderBottom: "none",
+            },
+            "& .name-column--cell": {
+              color: colors.greenAccent[300],
+            },
+            "& .MuiDataGrid-columnHeaders": {
+              backgroundColor: colors.blueAccent[700],
+            },
+            "& .MuiDataGrid-virtualScroller": {
+              backgroundColor: colors.primary[400],
+            },
+            "& .MuiDataGrid-footerContainer": {
+              borderTop: "none",
+              backgroundColor: colors.blueAccent[700],
+            },
+          }}
+        >
+          <DataGrid rows={mockDataTeam} columns={columns} />
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 

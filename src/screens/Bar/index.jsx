@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 
+// project imports
 import Header from "../../components/Header";
-import { COLORS } from "../../theme";
 import BarChart from "../../components/BarChart";
 
 const Bar = () => {
