@@ -2,7 +2,7 @@ import { ResponsivePie } from "@nivo/pie";
 import { useTheme } from "@mui/material";
 
 // project imports
-import { mockPieData as data } from "../../data/mockData";
+import { mockPieData } from "../../data/mockData";
 import { COLORS } from "../../theme";
 
 const PieChart = () => {
@@ -11,7 +11,7 @@ const PieChart = () => {
 
   return (
     <ResponsivePie
-      data={data}
+      data={mockPieData}
       theme={{
         axis: {
           domain: {

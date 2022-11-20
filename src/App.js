@@ -13,9 +13,8 @@ import Calendar from "./screens/Calendar";
 import FAQ from "./screens/FAQ";
 import Bar from "./screens/Bar";
 import Pie from "./screens/Pie";
-
-// import Line from "./screens/Line";
-// import Geography from "./screens/Geography";
+import Line from "./screens/Line";
+import Geography from "./screens/Geography";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -48,10 +47,8 @@ const AppNavigation = () => {
       <Route path="/faq" element={<FAQ />} />
       <Route path="/bar" element={<Bar />} />
       <Route path="/pie" element={<Pie />} />
-      {/* 
       <Route path="/line" element={<Line />} />
       <Route path="/geography" element={<Geography />} />
-      */}
     </Routes>
   );
 };

@@ -1,8 +1,9 @@
 import { useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
 
+// project imports
 import { COLORS } from "../../theme";
-import { mockBarData as data } from "../../data/mockData";
+import { mockBarData } from "../../data/mockData";
 
 const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
@@ -10,7 +11,7 @@ const BarChart = ({ isDashboard = false }) => {
 
   return (
     <ResponsiveBar
-      data={data}
+      data={mockBarData}
       theme={{
         // added
         axis: {
