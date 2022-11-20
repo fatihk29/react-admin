@@ -66,12 +66,17 @@ const Form = () => {
     handleSubmit,
     isSubmitting,
     touched,
-    values,
   } = formik;
 
   return (
     <Box m="20px">
       <Header title="Create User" subtitle="Create a New User Profile" />
+      <Box
+        display="grid"
+        gap="30px"
+        gridTemplateColumns="repeat(4, minmax(0, 1fr))"
+        sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span" } }}
+      ></Box>
     </Box>
   );
 };

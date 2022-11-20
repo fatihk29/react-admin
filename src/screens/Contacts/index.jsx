@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 
+// project imports
 import Header from "../../components/Header";
 import { COLORS } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";

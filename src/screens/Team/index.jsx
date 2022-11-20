@@ -2,12 +2,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
-import Header from "../../components/Header";
 
+// project imports
+import Header from "../../components/Header";
 import { COLORS } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
 

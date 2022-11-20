@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 
+// project imports
 import Header from "../../components/Header";
 
 const Dashboard = () => {

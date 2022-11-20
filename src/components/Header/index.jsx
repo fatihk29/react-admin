@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material";
 
+// project imports
 import { COLORS } from "../../theme";
 
 const Header = ({ title, subtitle }) => {
