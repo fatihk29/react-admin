@@ -8,7 +8,7 @@ import Dashboard from "./screens/Dashboard";
 import Team from "./screens/Team";
 import Contacts from "./screens/Contacts";
 import Invoices from "./screens/Invoices";
-import Form from "./screens/Form";
+import UserForm from "./screens/UserForm";
 import Calendar from "./screens/Calendar";
 import FAQ from "./screens/FAQ";
 import Bar from "./screens/Bar";
@@ -42,7 +42,7 @@ const AppNavigation = () => {
       <Route path="/team" element={<Team />} />
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/invoices" element={<Invoices />} />
-      <Route path="/form" element={<Form />} />
+      <Route path="/user-form" element={<UserForm />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/bar" element={<Bar />} />

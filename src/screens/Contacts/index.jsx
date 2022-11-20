@@ -12,11 +12,11 @@ const Contacts = () => {
   const colors = COLORS(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID", flex: 0.5 },
+    { field: "id", headerName: "ID", flex: 0.1 },
     {
       field: "registerId",
       headerName: "Register ID",
-      flex: 1,
+      flex: 0.5,
     },
     {
       field: "name",
@@ -30,6 +30,7 @@ const Contacts = () => {
       type: "number",
       headerAlign: "left",
       align: "left",
+      flex: 0.5,
     },
     { field: "phone", headerName: "Phone", flex: 1 },
     { field: "email", headerName: "Email", flex: 1 },
@@ -40,7 +41,7 @@ const Contacts = () => {
 
   return (
     <Grid container sx={{ p: "20px 20px 0px 20px" }}>
-      <Grid item xs={10} sm={10}>
+      <Grid item xs={12} sm={12} md={10}>
         <Header title="Contacts" subtitle="List of Contact" />
         <Grid
           m="40px 0 0 0"

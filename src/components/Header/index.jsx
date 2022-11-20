@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/material";
 
 // project imports
@@ -10,7 +10,7 @@ const Header = ({ title, subtitle }) => {
   const colors = COLORS(theme.palette.mode);
 
   return (
-    <Box sx={{ ml: 2 }}>
+    <Grid sx={{ mb: 2 }}>
       <Typography
         variant="h2"
         color={colors.grey[100]}
@@ -26,7 +26,7 @@ const Header = ({ title, subtitle }) => {
       >
         {subtitle}
       </Typography>
-    </Box>
+    </Grid>
   );
 };
 
